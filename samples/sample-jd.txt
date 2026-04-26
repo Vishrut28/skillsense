@@ -1,0 +1,26 @@
+Senior Frontend Engineer — FinTech Startup
+
+We're building the next-generation trading dashboard. You'll lead frontend architecture for our real-time data visualization platform used by professional traders.
+
+About the role:
+You'll own the frontend from architecture decisions to production deployment. We move fast — expect to ship meaningful features weekly. You'll work directly with the founding team and have real impact on the product.
+
+Requirements:
+- 3+ years React (hooks, context, performance optimization, code splitting)
+- TypeScript — strict mode, advanced generics, utility types preferred
+- State management: Redux Toolkit or Zustand (we use both)
+- WebSockets for real-time OHLC data streams
+- REST API integration, error boundaries, retry logic with exponential backoff
+- Basic Node.js/Express for our BFF (Backend for Frontend) layer
+- Git, CI/CD pipelines, Docker basics
+- Testing: Jest + React Testing Library
+
+Nice to have:
+- Understanding of financial data formats (OHLC, order books, tick data)
+- D3.js or similar for custom chart rendering
+- Experience with WebAssembly for performance-critical computations
+
+We offer:
+- Competitive salary + equity
+- Remote-first
+- Fast-paced fintech environment

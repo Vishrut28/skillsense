@@ -1,0 +1,44 @@
+Priya Sharma
+priya.sharma@email.com | github.com/priyasharma | linkedin.com/in/priyasharma
+Hyderabad, India
+
+SUMMARY
+Frontend Developer with 2 years of experience building React dashboards and REST-integrated UIs.
+Looking for a role where I can grow into senior responsibilities and tackle complex frontend problems.
+
+EXPERIENCE
+
+Frontend Developer — TechCorp Solutions (June 2022 – Present, 2 years)
+- Built and maintained 3 React dashboards for internal analytics, serving 50,000+ monthly users
+- Integrated 12+ REST APIs using Axios; implemented basic error handling and loading states
+- Wrote TypeScript for 2 new feature modules (started learning on the job in late 2023)
+- Collaborated with a small Node.js microservice team; wrote minor Express route modifications
+- Used Redux for global state in the analytics dashboard
+- Deployed via GitHub Actions CI/CD pipeline to AWS S3/CloudFront
+
+Intern — WebAgency (Jan 2022 – May 2022, 5 months)
+- Built responsive landing pages using HTML, CSS, JavaScript
+- Converted Figma designs to pixel-perfect React components
+
+TECHNICAL SKILLS
+Strong:      React, JavaScript (ES6+), Redux, REST APIs, Git, HTML/CSS
+Learning:    TypeScript, Node.js
+Heard of:    WebSockets, Docker, Testing (Jest)
+
+PROJECTS
+
+Analytics Dashboard (TechCorp)
+- React + Redux + Chart.js dashboard tracking business KPIs
+- Integrated with 5 internal REST APIs
+- ~50k monthly active users
+
+Personal Portfolio (github.com/priyasharma/portfolio)
+- Next.js + Tailwind CSS personal site
+
+EDUCATION
+B.Tech in Computer Science — SRM Institute of Science and Technology (2018–2022)
+CGPA: 8.2 / 10
+
+CERTIFICATIONS
+- Meta Frontend Developer Certificate (Coursera, 2023)
+- JavaScript Algorithms and Data Structures (freeCodeCamp, 2022)

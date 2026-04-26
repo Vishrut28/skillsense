@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "description": "Sample output from SkillSense agent for Priya Sharma vs Senior Frontend Engineer JD",
+    "generated": "2025-04-26",
+    "model": "claude-sonnet-4-20250514",
+    "totalQuestionsAsked": 21,
+    "assessmentDurationMinutes": 12
+  },
+
+  "extraction": {
+    "candidateName": "Priya Sharma",
+    "targetRole": "Senior Frontend Engineer",
+    "company": "FinTech Startup",
+    "skills": [
+      { "name": "React", "jdRequirement": "required", "resumeClaim": "proficient", "resumeEvidence": "Built and maintained 3 React dashboards", "priority": 1 },
+      { "name": "TypeScript", "jdRequirement": "required", "resumeClaim": "familiar", "resumeEvidence": "Wrote TypeScript for 2 new feature modules", "priority": 2 },
+      { "name": "State Management (Redux/Zustand)", "jdRequirement": "required", "resumeClaim": "proficient", "resumeEvidence": "Used Redux for global state", "priority": 3 },
+      { "name": "WebSockets", "jdRequirement": "required", "resumeClaim": "none", "resumeEvidence": null, "priority": 4 },
+      { "name": "REST API Integration", "jdRequirement": "required", "resumeClaim": "proficient", "resumeEvidence": "Integrated 12+ REST APIs using Axios", "priority": 5 },
+      { "name": "Node.js / Express", "jdRequirement": "required", "resumeClaim": "familiar", "resumeEvidence": "Minor Express route modifications", "priority": 6 },
+      { "name": "CI/CD & Docker", "jdRequirement": "preferred", "resumeClaim": "familiar", "resumeEvidence": "GitHub Actions CI/CD to AWS S3", "priority": 7 }
+    ]
+  },
+
+  "assessmentTranscript": {
+    "React": [
+      {
+        "q": "You've worked with Redux in a dashboard with 50k users — when does Redux become the wrong choice for state management, and what would you use instead?",
+        "a": "I think Redux is overkill for simple apps. Maybe Zustand or Context API? I've used Context for smaller things but not sure exactly when to draw the line."
+      },
+      {
+        "q": "You mentioned uncertainty about when to draw the line — let's test that. You have a dashboard with 8 components sharing auth state, a shopping cart, and some UI toggles. How would you split that across Context and Redux?",
+        "a": "Auth and cart are global so Redux, UI toggles stay local with useState. Actually I've seen people put everything in Redux which causes re-render issues."
+      },
+      {
+        "q": "You raised re-renders — what specific Redux pattern causes unnecessary re-renders and how do you fix it?",
+        "a": "Using useSelector with object returns — it compares by reference so it always re-renders. You fix it with reselect or by selecting primitive values."
+      }
+    ],
+    "TypeScript": [
+      {
+        "q": "Walk me through the most complex TypeScript type you've written — what problem did it solve?",
+        "a": "Honestly I'm still learning TypeScript. I mostly add types to function parameters and use interfaces for API response shapes. I haven't written complex generics."
+      },
+      {
+        "q": "You mentioned you define interfaces for API responses — if your API returns either a User or an Error object, how do you type that return value and safely narrow it in the consuming code?",
+        "a": "I'd use a union type like User | ApiError, then check if 'error' in response to narrow it. I think that's called a type guard? Not sure if there's a better way."
+      },
+      {
+        "q": "There is a more explicit way — discriminated unions. Can you explain what makes a union 'discriminated' and write the type for that User | ApiError case using it?",
+        "a": "I've heard the term but can't implement it off the top of my head. I know it involves a shared property that has a literal type to distinguish them."
+      }
+    ]
+  },
+
+  "scores": {
+    "React": {
+      "score": 6,
+      "level": "intermediate",
+      "rationale": "Priya demonstrates solid practical React knowledge — she correctly identified re-render causes with useSelector and knew the reselect solution. However, her Redux vs Context decision-making is still intuition-based rather than principled, suggesting she hasn't systematically evaluated state management tradeoffs.",
+      "strengths": ["Knows reselect pattern for re-render prevention", "Correct mental model for state colocation", "Real production experience at scale"],
+      "criticalGaps": ["No principled framework for state management decisions", "Hasn't worked with Zustand", "Performance optimization patterns beyond basic re-render fixes"],
+      "adjacentSkills": ["React Query", "Zustand"]
+    },
+    "TypeScript": {
+      "score": 3,
+      "level": "beginner",
+      "rationale": "Priya's TypeScript is at a functional but shallow level — she can type function params and interfaces but hasn't worked with generics, utility types, or advanced patterns. Her awareness of discriminated unions without ability to implement them shows she's at the learning stage.",
+      "strengths": ["Understands type narrowing concept", "Uses union types correctly", "Self-aware about current level"],
+      "criticalGaps": ["Cannot implement discriminated unions", "No experience with generics", "No experience with strict mode or utility types"],
+      "adjacentSkills": ["TypeScript generics", "Zod validation"]
+    },
+    "State Management (Redux/Zustand)": { "score": 6, "level": "intermediate" },
+    "WebSockets": { "score": 1, "level": "novice" },
+    "REST API Integration": { "score": 7, "level": "advanced" },
+    "Node.js / Express": { "score": 3, "level": "beginner" },
+    "CI/CD & Docker": { "score": 4, "level": "beginner" }
+  },
+
+  "learningPlan": {
+    "executiveSummary": "Priya is a solid mid-level frontend developer with real production experience — her React and API integration skills are job-ready. Her critical gap is TypeScript, where she scores 3/10 against a role requiring strict-mode expertise; without closing this gap she will struggle in the codebase from week one. WebSockets is a complete gap but learnable in 2–3 focused weeks given her strong JS foundation.",
+    "overallReadiness": 52,
+    "hiringRecommendation": "hire with plan",
+    "timeToJobReady": "8–10 weeks with focused effort",
+
+    "prioritySkills": [
+      {
+        "skill": "TypeScript",
+        "currentScore": 3,
+        "targetScore": 8,
+        "weeklyHours": 8,
+        "totalWeeks": 6,
+        "rationale": "Required skill, largest gap, blocks everything else in a TypeScript-first codebase.",
+        "resources": [
+          { "title": "TypeScript Deep Dive (Basarat)", "type": "book", "url": "https://basarat.gitbook.io/typescript/", "free": true, "estimatedHours": 20, "whyThisOne": "The most practical TypeScript resource available — focuses on real patterns not theory." },
+          { "title": "Execute Program — TypeScript course", "type": "practice", "url": "https://www.executeprogram.com/courses/typescript", "free": false, "estimatedHours": 15, "whyThisOne": "Spaced-repetition practice on generics, utility types, and narrowing — exactly the gaps identified." },
+          { "title": "Matt Pocock — Total TypeScript (free tutorials)", "type": "video", "url": "https://www.totaltypescript.com/tutorials", "free": true, "estimatedHours": 10, "whyThisOne": "Industry-standard TypeScript course creator — tutorials cover discriminated unions and generics directly." }
+        ],
+        "milestones": [
+          "Week 1–2: Implement 3 discriminated union types in a personal project",
+          "Week 3–4: Refactor an existing project to strict mode with zero any types",
+          "Week 5–6: Write a generic utility function used across a mini project"
+        ]
+      },
+      {
+        "skill": "WebSockets",
+        "currentScore": 1,
+        "targetScore": 7,
+        "weeklyHours": 6,
+        "totalWeeks": 3,
+        "rationale": "Core to this specific role — real-time trading data is the entire product.",
+        "resources": [
+          { "title": "MDN WebSockets API", "type": "docs", "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API", "free": true, "estimatedHours": 3, "whyThisOne": "Start here — authoritative reference, covers the complete API surface." },
+          { "title": "Socket.IO crash course (Traversy Media)", "type": "video", "url": "https://www.youtube.com/watch?v=jD7FnbI76Hg", "free": true, "estimatedHours": 2, "whyThisOne": "Practical project-based intro to real-time communication patterns." },
+          { "title": "Build a real-time stock ticker (project)", "type": "project", "url": "https://github.com/topics/websocket-react", "free": true, "estimatedHours": 10, "whyThisOne": "Build a real-time data feed in React — closest simulation of the actual job." }
+        ],
+        "milestones": [
+          "Week 1: Build a live chat app using native WebSocket API",
+          "Week 2: Connect to a public WebSocket feed (Binance crypto) and render live data in React",
+          "Week 3: Implement reconnection logic and error handling for dropped connections"
+        ]
+      }
+    ],
+
+    "weeklyPlan": [
+      { "day": "Mon", "morning": "TypeScript Deep Dive — chapter reading", "evening": "Implement today's concepts in a sandbox project", "totalHours": 2.5 },
+      { "day": "Tue", "morning": "Execute Program TypeScript practice (30 min)", "evening": "WebSocket project work", "totalHours": 2 },
+      { "day": "Wed", "morning": "Matt Pocock video tutorials", "evening": "Code review own work, fix type errors", "totalHours": 2 },
+      { "day": "Thu", "morning": "Execute Program practice", "evening": "WebSocket project — add reconnection logic", "totalHours": 2 },
+      { "day": "Fri", "morning": "Free — consolidate the week's learning", "evening": "Write a short blog post / notes on what you learned", "totalHours": 1.5 },
+      { "day": "Sat", "morning": "Longer project session — build something complete", "evening": "Rest", "totalHours": 3 },
+      { "day": "Sun", "morning": "Review and plan next week", "evening": "Rest", "totalHours": 1 }
+    ],
+
+    "thirtyDayMilestones": [
+      "Day 7: Can implement a discriminated union and explain it to someone else",
+      "Day 14: Personal project running in TypeScript strict mode with zero `any` types",
+      "Day 21: Live WebSocket feed rendering in React with proper error and reconnection handling",
+      "Day 30: Mini trading dashboard — React + TypeScript + WebSocket + Redux — deployed on Vercel"
+    ],
+
+    "interviewTips": [
+      "For TypeScript questions: admit your current level honestly but show you understand *what* you're missing — interviewers respect self-awareness over bluffing.",
+      "Prepare a concrete answer to 'walk me through how you'd architect a real-time data dashboard' — this is almost certain to come up.",
+      "Your REST API and Redux knowledge is genuinely strong — lead with your most complex API integration story and the re-render bug you fixed.",
+      "For the WebSocket gap: say you've been building a real-time project using the Binance WebSocket API (you will have by day 21) — show the code on GitHub."
+    ]
+  }
+}
